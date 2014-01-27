@@ -24,7 +24,7 @@
         </java>
         <sleep seconds="2"/>
     </target>
-    <target depends="run" name="test">
+    <target depends="run" name="test" spawn="true">
         <fail />
     </target>
 </project>
