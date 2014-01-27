@@ -11,7 +11,7 @@
             <classpath refid="class.path"/>
         </javac>
     </target>
-    <target depends="compile" name="run">
+    <target depends="compile" name="run" spawn="true">
         <echo message="Running on Windows..."/>
         <exec executable="cmd">
             <arg value="/c kill_process.bat"/>
@@ -24,7 +24,7 @@
         </java>
         <sleep seconds="2"/>
     </target>
-    <target depends="run" name="test" spawn="true">
+    <target depends="run" name="test">
         <get src=”http://localhost:9090/time” dest=”time”/>
     </target>
 </project>
