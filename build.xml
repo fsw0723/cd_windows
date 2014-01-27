@@ -25,6 +25,6 @@
         <sleep seconds="2"/>
     </target>
     <target depends="run" name="test" spawn="true">
-        <fail />
+        <get src=”http://localhost:9090/time” dest=”time”/>
     </target>
 </project>
